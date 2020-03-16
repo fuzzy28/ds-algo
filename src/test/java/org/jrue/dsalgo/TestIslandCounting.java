@@ -1,4 +1,4 @@
-package org.jrue.dsalgo.btree;
+package org.jrue.dsalgo;
 
 import org.jrue.dsalgo.IslandCounting;
 import org.junit.Before;
