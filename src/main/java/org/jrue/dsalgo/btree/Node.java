@@ -1,4 +1,4 @@
-package org.jrue.dsalgo;
+package org.jrue.dsalgo.btree;
 
 public class Node<E> {
 

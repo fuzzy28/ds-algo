@@ -1,7 +1,7 @@
-package dsalgo;
+package org.jrue.dsalgo.btree;
 
-import org.jrue.dsalgo.BinarySearchTreeChecker;
-import org.jrue.dsalgo.Node;
+import org.jrue.dsalgo.btree.BinarySearchTreeChecker;
+import org.jrue.dsalgo.btree.Node;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
