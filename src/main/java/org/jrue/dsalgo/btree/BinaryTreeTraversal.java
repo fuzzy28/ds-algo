@@ -5,22 +5,22 @@ import java.util.Queue;
 
 public class BinaryTreeTraversal {
 
-    private BinaryTreeImpl tree;
+    private Node<Integer> root;
 
-    public BinaryTreeTraversal(BinaryTreeImpl tree) {
-        this.tree = tree;
+    public BinaryTreeTraversal(Node<Integer> root) {
+        this.root = root;
     }
 
     public String inOrder() {
-        return inOrderRecursive(tree.getRoot(), new StringBuilder()).toString();
+        return inOrderRecursive(root, new StringBuilder()).toString();
     }
 
     public String preOrder()  {
-        return preOrderRecursive(tree.getRoot(), new StringBuilder()).toString();
+        return preOrderRecursive(root, new StringBuilder()).toString();
     }
 
     public String postOrder() {
-        return postOrderRecursive(tree.getRoot(), new StringBuilder()).toString();
+        return postOrderRecursive(root, new StringBuilder()).toString();
     }
 
     private StringBuilder inOrderRecursive(Node<?> node, StringBuilder result) {
@@ -59,7 +59,7 @@ public class BinaryTreeTraversal {
     public String levelOrder() {
         StringBuilder sb = new StringBuilder();
         Queue<Node> nodes = new LinkedList<>();
-        nodes.add(tree.getRoot());
+        nodes.add(root);
         while(nodes.peek() != null) {
 
             Node node = nodes.poll();

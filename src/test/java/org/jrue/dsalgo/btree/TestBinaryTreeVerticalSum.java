@@ -21,7 +21,7 @@ public class TestBinaryTreeVerticalSum {
         tree.add(40);
         tree.add(30);
         tree.add(45);
-        this.verticalSum = new BinaryTreeVerticalSum(tree);
+        this.verticalSum = new BinaryTreeVerticalSum(tree.getRoot());
     }
 
     @Test

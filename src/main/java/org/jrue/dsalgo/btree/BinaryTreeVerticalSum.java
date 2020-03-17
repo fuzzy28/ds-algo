@@ -1,20 +1,18 @@
 package org.jrue.dsalgo.btree;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class BinaryTreeVerticalSum {
 
-    private BinaryTreeImpl tree;
+    private Node<Integer> root;
 
-    public BinaryTreeVerticalSum(BinaryTreeImpl tree) {
-        this.tree = tree;
+    public BinaryTreeVerticalSum(Node<Integer> root) {
+        this.root = root;
     }
 
     public Integer sumOf(int index) {
-        return sumRecursively(tree.getRoot(), 0, new HashMap<Integer, Integer>()).get(index);
+        return sumRecursively(root, 0, new HashMap<Integer, Integer>()).get(index);
     }
 
     private Map<Integer, Integer> sumRecursively(Node<? extends Number> node, int i, Map<Integer, Integer> sum) {

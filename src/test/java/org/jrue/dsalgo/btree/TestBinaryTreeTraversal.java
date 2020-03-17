@@ -16,7 +16,7 @@ public class TestBinaryTreeTraversal {
     @Before
     public void setup() {
         this.tree = new BinaryTreeImpl(50);
-        this.traversal = new BinaryTreeTraversal(tree);
+        this.traversal = new BinaryTreeTraversal(tree.getRoot());
         tree.add(60);
         tree.add(55);
         tree.add(65);
