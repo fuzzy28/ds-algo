@@ -33,6 +33,25 @@ public class TestGraphImpl {
         graph.addEdge("Joel", "Michael");
         graph.addEdge("Angel", "Lee");
         graph.addEdge("Angel", "Rose");
-        assertEquals(3, graph.getAdjacentVertices("Angel").size());
+        assertEquals(2, graph.getAdjacentVertices("Angel").size());
+    }
+
+    @Test
+    public void removeVertex() {
+        graph.removeVertex("Joel");
+        assertEquals(4, graph.getAdjacentVertices().size());
+    }
+
+    @Test
+    public void removeEdge() {
+        //prepare edges
+        graph.addEdge("Joel", "Angel");
+        graph.addEdge("Joel", "Rose");
+        graph.addEdge("Angel", "Rose");
+
+        assertEquals(2, graph.getAdjacentVertices("Joel").size());
+
+        graph.removeEdge("Joel", "Rose");
+        assertEquals(1, graph.getAdjacentVertices("Joel").size());
     }
 }
